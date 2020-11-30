@@ -1,0 +1,149 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="row d-none d-md-flex">
+    <div class="col-3">
+        <app-left-navigation-bar> </app-left-navigation-bar>
+    </div>
+    <div class="col-9" id="body">
+        <p>Resultados de la Busqueda para Dua Lipa</p>
+        <div class="row my-5">
+            <div>
+                <h1>Canciones</h1>
+            </div>
+
+            <table class="table mt-4">
+                <thead>
+                    <th>
+
+                    </th>
+                    <th>
+                        TITLE
+                    </th>
+                    <th>
+                        ARTIST
+                    </th>
+                    <th>ALBUM</th>
+                    <th>
+                        RELEASE DATE
+                    </th>
+                    <th>
+
+                    </th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let song of songs">
+                        <td>
+                            <fa-icon [icon]="faPlay" class="table-icon"> </fa-icon>
+                        </td>
+                        <td [routerLink]="['/song/detail']">
+                            {{song.name}}
+                        </td>
+                        <td>
+                            {{song.artist}}
+                        </td>
+                        <td>
+                            {{song.album}}
+                        </td>
+                        <td>
+                            {{song.release}}
+                        </td>
+                        <td class="text-right">
+                            <a class="corazon" (click)="clickCorazon()" [style.color]="getCorazon()">
+                                <fa-icon [icon]="faHeart" class="mx-2 icon"></fa-icon>
+                            </a>
+                            <fa-icon [icon]="faList" class="mx-4 table-icon"> </fa-icon>
+                            <fa-icon [icon]="faDots" class="table-icon"></fa-icon>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a class="icono-left">
+                <span>+ Ver Mas</span>
+            </a>
+        </div>
+
+        <div class="row my-5">
+            <h1 class="title-row">Playlist</h1>
+            <div class="row">
+                <app-playlist-item url="https://99designs-blog.imgix.net/blog/wp-content/uploads/2017/12/attachment_68585523.jpg?auto=format&q=60&fit=max&w=930" [routerLink]="['/playlist/detail']"> </app-playlist-item>
+                <app-playlist-item url="https://images-na.ssl-images-amazon.com/images/I/71hhWv46jSL._AC_SL1200_.jpg" [routerLink]="['/playlist/detail']"> </app-playlist-item>
+                <app-playlist-item url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLm7PE1ANz0lGsf4jZz1BzvDTH6IzkWgB7TA&usqp=CAU" [routerLink]="['/playlist/detail']"> </app-playlist-item>
+                <app-playlist-item url="https://upload.wikimedia.org/wikipedia/commons/7/72/Nirvana_album_cover.jpg" [routerLink]="['/playlist/detail']"> </app-playlist-item>
+                <app-playlist-item url="https://www.udiscovermusic.com/wp-content/uploads/2015/10/Bee-Gees-Odessa-album-cover-web-optimised-820.jpg" [routerLink]="['/playlist/detail']"> </app-playlist-item>
+            </div>
+        </div>
+
+        <div class="row mt-5 last-row">
+            <h1 class="title-row"> Podcast</h1>
+            <div class="row">
+                <app-playlist-item url="https://cdn.cp.adobe.io/content/2/rendition/803402ad-b7bf-4d5f-8013-2b0b2c53e3b6/artwork/0687a1f2-5407-400d-b540-c7454f593fde/version/0/format/jpg/dimension/width/size/240" [routerLink]="['/podcast/detail']"> </app-playlist-item>
+                <app-playlist-item url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoN9D3cgnT6Y_4L56oF-lUfUJqSIz5kyZk0g&usqp=CAU" [routerLink]="['/podcast/detail']"> </app-playlist-item>
+                <app-playlist-item url="https://d3ui957tjb5bqd.cloudfront.net/uploads/2020/08/25132918/Podcast-Cover-Art-dribbble.jpg" [routerLink]="['/podcast/detail']"> </app-playlist-item>
+                <app-playlist-item url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTmi_wqCSMTpCMUZuIdgvUJbORttvrAyQsnA&usqp=CAU" [routerLink]="['/podcast/detail']"> </app-playlist-item>
+                <app-playlist-item url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWlEwg-Az1m_BLhWD9FbNkeurHZ28S0uSW-Q&usqp=CAU" [routerLink]="['/podcast/detail']"> </app-playlist-item>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+
+<!-- MOBILE -->
+<div id="mobile">
+
+    <div class="mt-5 pt-4">
+        <p>Resultados de la Busqueda para Dua Lipa</p>
+        <h2>Canciones</h2>
+
+        <table class="table">
+            <thead>
+
+            </thead>
+            <tbody>
+                <tr *ngFor="let song of songs">
+                    <td>
+                        <fa-icon [icon]="faPlay"> </fa-icon>
+                    </td>
+                    <td [routerLink]="['/song/detail']">
+                        {{song.name}}
+                    </td>
+                    <td class="text-right">
+                        <fa-icon *ngIf="song.favorite" [icon]="faHeart" class="mx-5"> </fa-icon>
+                        <fa-icon [icon]="faDots"></fa-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a class="icono-left">
+            <span>+ Ver Mas</span>
+        </a>
+    </div>
+
+    <div class="mt-5 pt-4">
+        <h2> Playlist</h2>
+        <div class="row">
+            <app-playlist-item url="https://99designs-blog.imgix.net/blog/wp-content/uploads/2017/12/attachment_68585523.jpg?auto=format&q=60&fit=max&w=930" [routerLink]="['/playlist/detail']"> </app-playlist-item>
+            <app-playlist-item url="https://images-na.ssl-images-amazon.com/images/I/71hhWv46jSL._AC_SL1200_.jpg" [routerLink]="['/playlist/detail']"> </app-playlist-item>
+            <app-playlist-item url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLm7PE1ANz0lGsf4jZz1BzvDTH6IzkWgB7TA&usqp=CAU" [routerLink]="['/playlist/detail']"> </app-playlist-item>
+            <app-playlist-item url="https://upload.wikimedia.org/wikipedia/commons/7/72/Nirvana_album_cover.jpg" [routerLink]="['/playlist/detail']"> </app-playlist-item>
+        </div>
+    </div>
+
+    <div class="mt-5 pt-4">
+        <h2> Podcast</h2>
+        <div class="row">
+            <app-playlist-item url="https://cdn.cp.adobe.io/content/2/rendition/803402ad-b7bf-4d5f-8013-2b0b2c53e3b6/artwork/0687a1f2-5407-400d-b540-c7454f593fde/version/0/format/jpg/dimension/width/size/240" [routerLink]="['/podcast/detail']"> </app-playlist-item>
+            <app-playlist-item url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoN9D3cgnT6Y_4L56oF-lUfUJqSIz5kyZk0g&usqp=CAU" [routerLink]="['/podcast/detail']"> </app-playlist-item>
+            <app-playlist-item url="https://d3ui957tjb5bqd.cloudfront.net/uploads/2020/08/25132918/Podcast-Cover-Art-dribbble.jpg" [routerLink]="['/podcast/detail']"> </app-playlist-item>
+            <app-playlist-item url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTmi_wqCSMTpCMUZuIdgvUJbORttvrAyQsnA&usqp=CAU" [routerLink]="['/podcast/detail']"> </app-playlist-item>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+<app-music-reproductor></app-music-reproductor>

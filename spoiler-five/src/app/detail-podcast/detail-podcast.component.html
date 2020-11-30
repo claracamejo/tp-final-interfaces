@@ -1,0 +1,218 @@
+<div class="fixed-top">
+    <app-nav-bar></app-nav-bar>
+</div>
+<div class="row d-none d-md-flex desktop-display">
+    <div class="col-3">
+        <app-left-navigation-bar> </app-left-navigation-bar>
+    </div>
+
+    <div class="col-9">
+        <div class="row mt-5">
+            <div class="col-10">
+                <div class="row">
+                    <div class="col-3 user-review text-center">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-front">
+                                    <img src="https://images.squarespace-cdn.com/content/v1/5a7b4f21b07869771e2c1461/1573968639452-BZSMUKQRNR0ZVTEE9CH1/ke17ZwdGBToddI8pDm48kNiEM88mrzHRsd1mQ3bxVct7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0s0XaMNjCqAzRibjnE_wBlkZ2axuMlPfqFLWy-3Tjp4nKScCHg1XF4aLsQJlo6oYbA/Podcast_Cover.jpg"
+                                        height="193" alt="">
+                                </div>
+                                <div class="card-back bg-dark">
+                                    <p class="card-body">
+                                        <fa-icon [icon]="faPlay" class="play-icon"> </fa-icon>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Puntua este contenido! </p>
+                            <a class="star" (click)="clickAddTodo(1)" [style.color]="getcolor()">
+                                <fa-icon [icon]="faStar"> </fa-icon>
+                            </a>
+                            <a class="star" (click)="clickAddTodo(2)" [style.color]="getcolor2()">
+                                <fa-icon [icon]="faStar"> </fa-icon>
+                            </a>
+                            <a class="star" (click)="clickAddTodo(3)" [style.color]="getcolor3()">
+                                <fa-icon [icon]="faStar"> </fa-icon>
+                            </a>
+                            <a class="star" (click)="clickAddTodo(4)" [style.color]="getcolor4()">
+                                <fa-icon [icon]="faStar"> </fa-icon>
+                            </a>
+                            <a class="star" (click)="clickAddTodo(5)" [style.color]="getcolor5()">
+                                <fa-icon [icon]="faStar"> </fa-icon>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-7 podcast-details">
+                        <p class="type pt-2">PODCAST</p>
+                        <h2>The Striving Artist</h2>
+                        <p> <span> by </span> 2B </p>
+                        <div class="pt-3 podcast-rating">
+                            <fa-icon [icon]="faStar"> </fa-icon>
+                            <fa-icon [icon]="faStar"> </fa-icon>
+                            <fa-icon [icon]="faStar"> </fa-icon>
+                            <fa-icon [icon]="faStar"> </fa-icon>
+                            <fa-icon [icon]="faStar"> </fa-icon>
+                            3.75 <span class="pl-5"> Ver detalle de la puntuacion</span>
+                        </div>
+                        <p class="label-podcast">RELEASE DATE: <span class="mx-4">  26-01-2016 </span></p>
+                        <p class="label-podcast">ABOUT: </p>
+                        <p>Podcast relacionado con el mundo del arte. Charlas, guias, trucos y mucho mas.</p>
+                    </div>
+                    <div class="col-2 right-icons text-right">
+                        <div>
+                            4 episodios
+                            <fa-icon [icon]="faClock" class="ml-3"> </fa-icon>
+                        </div>
+                        <div class="mt-4">
+                            <fa-icon [icon]="faShare" class="mx-5"> </fa-icon>
+                            <fa-icon [icon]="faHeart"> </fa-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-10">
+                <table class="table mt-4">
+                    <tbody>
+                        <tr *ngFor="let ep of episodes">
+                            <td>
+                                <fa-icon [icon]="faPlay"> </fa-icon>
+                            </td>
+                            <td>
+                                {{ep.name}}
+                            </td>
+                            <td class="text-right">
+                                <fa-icon *ngIf="ep.seen" [icon]="faChecked" class="mx-5"> </fa-icon>
+                                <fa-icon [icon]="faDots"></fa-icon>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-10 bordered mt-5 pb-5">
+                <div class="row m-5">
+                    <img src="./assets/small-pic.png" class="rounded-circle mr-" alt="">
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <button class="primary-button text-center float-right mr-5"> Opinar</button>
+                <div class="row my-2 mt-5" *ngFor="let comment of comments">
+                    <div class="mx-5 px-4 my-1 comentario">
+                        <p> <span class="mr-3">{{ comment.username}}</span> puntuó <span class="mx-2"> 
+                            <fa-icon [icon]="faStar" *ngFor="let star of comment.stars"> </fa-icon> 
+                        </span> </p>
+                        <p *ngIf="comment.comment != ''" class="ml-4"> {{comment.comment}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="mobile-display d-block d-md-none mt-4">
+    <div class="row pt-5 mt-5 podcast-header">
+        <div class="col-6 text-center pt-5">
+            <img src="https://images.squarespace-cdn.com/content/v1/5a7b4f21b07869771e2c1461/1573968639452-BZSMUKQRNR0ZVTEE9CH1/ke17ZwdGBToddI8pDm48kNiEM88mrzHRsd1mQ3bxVct7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0s0XaMNjCqAzRibjnE_wBlkZ2axuMlPfqFLWy-3Tjp4nKScCHg1XF4aLsQJlo6oYbA/Podcast_Cover.jpg"
+                height="118" alt="">
+        </div>
+        <div class="col-6 text-center podcast-details pt-5">
+            <h4>The Striving Artist</h4>
+            <p>by 2B </p>
+            <fa-icon [icon]="faStar"> </fa-icon>
+            <fa-icon [icon]="faStar"> </fa-icon>
+            <fa-icon [icon]="faStar"> </fa-icon>
+            <fa-icon [icon]="faStar"> </fa-icon>
+            <fa-icon [icon]="faStar"> </fa-icon>
+            3.15
+        </div>
+    </div>
+    <div class="row container">
+        <div class="col-12 text-center">
+            <p class="label">ABOUT:</p>
+            <p>Podcast relacionado con el mundo del desarrollo web y la programacion en general. Charlas, guias, trucos y mucho mas.</p>
+        </div>
+        <div class="col-6 user-review text-center">
+            <p>Tu valoracion:</p>
+            <a class="star" (click)="clickAddTodo(1)" [style.color]="getcolor()">
+                <fa-icon [icon]="faStar"> </fa-icon>
+            </a>
+            <a class="star" (click)="clickAddTodo(2)" [style.color]="getcolor2()">
+                <fa-icon [icon]="faStar"> </fa-icon>
+            </a>
+            <a class="star" (click)="clickAddTodo(3)" [style.color]="getcolor3()">
+                <fa-icon [icon]="faStar"> </fa-icon>
+            </a>
+            <a class="star" (click)="clickAddTodo(4)" [style.color]="getcolor4()">
+                <fa-icon [icon]="faStar"> </fa-icon>
+            </a>
+            <a class="star" (click)="clickAddTodo(5)" [style.color]="getcolor5()">
+                <fa-icon [icon]="faStar"> </fa-icon>
+            </a>
+        </div>
+        <div class="col-6 text-right pt-5 right-icons">
+            <fa-icon [icon]="faHeart" class="mx-5"> </fa-icon>
+            <fa-icon [icon]="faShare"> </fa-icon>
+        </div>
+    </div>
+
+    <ul class="nav nav-tabs mt-3">
+        <li class="active"><a data-toggle="tab" href="#episodios">Episodios</a></li>
+        <li><a data-toggle="tab" href="#actividad">Actividad </a></li>
+        <li><a data-toggle="tab" href="#comentar">Comentar</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="episodios" class="tab-pane fade in active mx-3">
+            <table class="table">
+                <thead>
+
+                </thead>
+                <tbody>
+                    <tr *ngFor="let ep of episodes">
+                        <td>
+                            <fa-icon [icon]="faPlay"> </fa-icon>
+                        </td>
+                        <td>
+                            {{ep.name}}
+                        </td>
+                        <td class="text-right">
+                            <fa-icon *ngIf="ep.seen" [icon]="faChecked" class="mx-5"> </fa-icon>
+                            <fa-icon [icon]="faDots"></fa-icon>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="actividad" class="tab-pane fade mx-3 py-5">
+            <div class="bordered container">
+                <div class="row p-4" *ngFor="let comment of comments">
+                    <div class="py-2 comentario">
+                        <p> <span class="mr-2">{{ comment.username}} </span> puntuó <span class="mx-2"> 
+                            <fa-icon [icon]="faStar" *ngFor="let star of comment.stars"> </fa-icon> 
+                        </span> </p>
+                        <p *ngIf="comment.comment !='' "> {{comment.comment}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="comentar" class="tab-pane fade">
+            <div class="container">
+                <div class="row">
+                    <h2 class="ml-5">Comenta! </h2>
+                </div>
+                <div class="row">
+                    <textarea cols="30 " class="mx-auto" rows="10"></textarea>
+                </div>
+                <button class="primary-button text-center float-right mt-3"> Opinar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<app-music-reproductor> </app-music-reproductor>

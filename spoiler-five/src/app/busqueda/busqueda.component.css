@@ -1,0 +1,80 @@
+.busqueda {
+    background-color: var(--dark-grey);
+    margin-top: 5rem;
+    height: 80vh;
+    width: 100%;
+}
+
+.inpBusqueda {
+    width: 60vw;
+    height: 2rem;
+    left: 15%;
+    top: 10%;
+    z-index: 0;
+}
+
+.inpBusqueda input {
+    width: 55vw;
+    background: white;
+    border-radius: 100px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--primary-color);
+    margin-right: 2%;
+}
+
+label {
+    background: -webkit-linear-gradient(#FC947D 0%, #FB7079 53.65%, #FA5075 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#titulo {
+    text-align: center;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    height: 30%;
+    width: 50%;
+    margin: -15% 0 0 -25%;
+    background: -webkit-linear-gradient(#FC947D 0%, #FB7079 53.65%, #FA5075 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.groupButtons {
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    height: 30%;
+    width: 70%;
+    margin: -15% 0 0 -25%;
+}
+
+.boton {
+    display: inline;
+    margin: 3%;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 1px;
+    background: -webkit-linear-gradient(#FC947D 0%, #FB7079 53.65%, #FA5075 100%);
+    color: white;
+}
+
+.inputGroups {
+    text-align: center;
+    position: absolute;
+    top: 65%;
+    left: 40%;
+    height: 30%;
+    width: 70%;
+    margin: -15% 0 0 -25%;
+}
+
+.custom-select {
+    border-radius: 100px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--primary-color);
+}

@@ -1,0 +1,219 @@
+textarea {
+    height: 77px;
+    width: 90%;
+    resize: none;
+}
+
+.bordered {
+    border-radius: 22px;
+    border: 2px black solid;
+}
+
+.primary-button {
+    width: 128px;
+    height: 30px;
+    border-radius: 100px;
+}
+
+.desktop-display {
+    margin-bottom: 10%;
+    margin-top: 5%;
+    color: white;
+}
+
+.mobile-display {
+    margin-bottom: 30%;
+    margin-top: 5%;
+    color: white;
+}
+
+.star :hover {
+    color: yellow;
+}
+
+.fixed-top {
+    height: 100px;
+}
+
+@media only screen and (min-width: 420px) {
+    .user-review fa-icon {
+        font-size: 30px;
+    }
+    .user-review p {
+        margin: 0;
+    }
+    .song-details .type {
+        font-size: 16px;
+        color: #FC947D;
+    }
+    .song-details {
+        font-style: bold;
+    }
+    .song-details p span {
+        color: #FC947D;
+    }
+    .song-rating fa-icon {
+        font-size: 20px;
+        color: #E1914B;
+    }
+    .song-rating span {
+        text-decoration: underline;
+    }
+    .right-icons fa-icon {
+        font-size: 22px;
+        color: #FC947D;
+    }
+    .right-icons {
+        font-size: 16px;
+        color: #FC947D;
+    }
+    textarea {
+        height: 77px;
+        width: 90%;
+        background-color: #383B49;
+        border: 1px solid #FC947D;
+        border-radius: 5px;
+        resize: none;
+    }
+    .bordered {
+        border-radius: 22px;
+        border: 2px #FC947D solid;
+    }
+    .bordered .row {
+        margin-bottom: 0px !important;
+    }
+    .comentario span {
+        color: #FC947D;
+        font-size: 18px;
+    }
+    .comentario fa-icon {
+        color: #E1914B;
+    }
+    .comentario p {
+        font-size: 14px;
+        margin: 0.2rem;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .song-details {
+        color: #FC947D;
+    }
+    .song-details fa-icon {
+        color: #E1914B;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    .song-header {
+        width: 100%;
+    }
+    textarea {
+        height: 126px;
+        width: 90%;
+        background-color: #585A66;
+        border: 1px solid #FC947D;
+        border-radius: 5px;
+        resize: none;
+    }
+    .bordered {
+        border: 2px solid #FC947D;
+        border-radius: 30px;
+    }
+    .comentario span {
+        color: #FC947D;
+        font-size: 18px;
+    }
+    .comentario fa-icon {
+        color: #E1914B;
+    }
+    .comentario p {
+        font-size: 14px;
+        margin: 0.2rem;
+    }
+    #comentar h2 {
+        color: #FC947D;
+    }
+    .user-review fa-icon {
+        font-size: 22px;
+    }
+    .user-review p {
+        color: #FC947D;
+        margin-bottom: 0;
+    }
+    .right-icons fa-icon {
+        font-size: 24px;
+    }
+}
+
+
+/*flip card */
+
+.card {
+    background-color: var(--dark-grey);
+    position: relative;
+    width: 210px;
+    height: 210px;
+    cursor: pointer;
+    float: right;
+    border: none;
+}
+
+.card:hover .card-content {
+    transform: rotateY(.5turn);
+}
+
+.card-content {
+    height: 150px;
+    text-align: center;
+    position: relative;
+    padding: 5rem;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.card-back p {
+    margin-top: 50px;
+}
+
+.card-back,
+.card-front {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    width: 193px;
+    height: 193px;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    align-content: center;
+    border-radius: 10px;
+}
+
+.card-front {
+    background-size: cover;
+}
+
+.card-front::before {
+    position: absolute;
+    top: 1em;
+    bottom: 1em;
+    left: 1em;
+    right: 1em;
+    transform: translateZ(3rem)
+}
+
+.card-back {
+    transform: rotateY(.5turn);
+}
+
+.card-body {
+    font-size: 1.3rem !important;
+    transform: translateZ(3rem);
+}
+
+.card-body fa-icon {
+    color: #FC947D;
+}

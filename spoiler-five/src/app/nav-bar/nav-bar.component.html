@@ -1,0 +1,161 @@
+<nav class="fixed-top" id="mobile">
+
+    <a class="icono-left" (click)="backClicked()">
+        <img src="./assets/iconos/arrow.svg" width="25" height="25" alt="" loading="lazy">
+    </a>
+
+    <a class="logoSpoiler" [routerLink]="['/home']">
+        <img src="./assets/iconos/logo.png" width="40" height="40" alt="" loading="lazy"> Spoiler Five
+    </a>
+
+    <a class="icono" (click)="clickAddTodo()">
+        <img src="./assets/iconos/burguer-menu.svg" width="25" height="25" class="align-top logo" alt="" loading="lazy">
+    </a>
+
+    <a class="icono" href="#">
+        <img src="./assets/iconos/Notificacion-bell.svg" width="25" height="25" class="align-top logo" alt="" loading="lazy">
+    </a>
+
+    <a class="icono" [routerLink]="['/buscar']">
+        <img src="./assets/iconos/Vector.svg" width="25" height="25" class="align-top logo" alt="" loading="lazy">
+    </a>
+
+    <div id="menu" [style.right]="getPixeles()">
+        <img id="img-perfil" src="./assets/iconos/img-perfil.png" alt="">
+        <div class="lista">
+            <a [routerLink]="['/home']">
+                <h5>Inicio</h5>
+            </a>
+        </div>
+        <div class="lista">
+            <a href="#">
+                <h5>Mi Música</h5>
+            </a>
+        </div>
+        <div class="lista">
+            <a href="#">
+                <h5>Mi Cuenta</h5>
+            </a>
+        </div>
+        <div class="lista">
+            <a href="#">
+                <h5>Premium</h5>
+            </a>
+        </div>
+        <div class="lista">
+            <a href="#">
+                <h5>Configuración</h5>
+            </a>
+        </div>
+        <div class="lista">
+            <a href="#">
+                <h5>Ayuda</h5>
+            </a>
+        </div>
+
+        <div class="fotter">
+            <a href="#">
+                <h5>Cerrar Sesión</h5>
+            </a>
+        </div>
+
+    </div>
+</nav>
+
+
+
+<nav id="desktop" class="fixed-top">
+    <a class="icono-left" href="#">
+        <img src="./assets/iconos/Search.svg" width="40" height="40" alt="" loading="lazy">
+    </a>
+
+    <input type="text" class="redondeadonorelieve" placeholder="Buscar">
+
+    <button class="boton" [routerLink]="['/resultado']">Ir</button>
+
+    <a class="btnfilter" (click)="clickFiltro()">
+        <img src="./assets/iconos/Filter.svg" height="40" alt="" loading="lazy">
+    </a>
+
+    <img id="perfil" src="./assets/iconos/img-perfil.png" alt="" (click)="clickPerfil()">
+    <a class="icono" href="#">
+        <img src="./assets/iconos/Vector-2.svg" width="40" height="40" class="align-top logo" alt="" loading="lazy">
+    </a>
+
+    <div id="filterMenu" [style.visibility]="visibleFilter()">
+        <div class="form-check check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1" style="margin-left: 10%;">
+                Artista
+            </label>
+        </div>
+        <div class="form-check check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+            <label class="form-check-label" for="defaultCheck2" style="margin-left: 10%;">
+                Album
+            </label>
+        </div>
+        <div class="form-check check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+            <label class="form-check-label" for="defaultCheck3" style="margin-left: 10%;">
+                Cancion
+            </label>
+        </div>
+        <div class="form-check check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+            <label class="form-check-label " for="defaultCheck4" style="margin-left: 10%;">
+                Playlist
+            </label>
+        </div>
+        <div class="form-check check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
+            <label class="form-check-label" for="defaultCheck5" style="margin-left: 10%;">
+                Podcast
+            </label>
+        </div>
+        <div class="comboFiltro">
+            <label for="miselect">Genero</label>
+            <select class="custom-select" name="miselect" [ngModel]="seleccionadoGenero">
+                <option selected>Open this select menu</option>
+                <option [value]="item" *ngFor="let item of genero">{{item}}</option>
+            </select>
+
+            <label for="miselect">Decada</label>
+            <select class="custom-select" name="miselect" [ngModel]="seleccionadoDecada">
+                <option selected>Open this select menu</option>
+                <option [value]="item" *ngFor="let item of decadas">{{item}}</option>
+            </select>
+        </div>
+    </div>
+
+
+
+</nav>
+
+<div id="menuPerfil" [style.visibility]="visibleMenuPerfil()">
+    <div class="lista">
+        <a>
+            <h5>Mi Cuenta</h5>
+        </a>
+    </div>
+    <div class="lista">
+        <a>
+            <h5>Mi Cuenta</h5>
+        </a>
+    </div>
+    <div class="lista">
+        <a>
+            <h5>Premium</h5>
+        </a>
+    </div>
+    <div class="lista">
+        <a>
+            <h5>Configuración</h5>
+        </a>
+    </div>
+    <div class="lista">
+        <a>
+            <h5>Ayuda</h5>
+        </a>
+    </div>
+</div>

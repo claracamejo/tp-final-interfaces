@@ -1,0 +1,41 @@
+<app-nav-bar></app-nav-bar>
+<div class="busqueda">
+
+    <div class="input-group mb-3 inpBusqueda">
+        <input class="" type="text" class="form-control" placeholder="Buscar" aria-label="Username">
+        <div class="input-group-append">
+            <button class="boton" style="margin-top: 25%;" [routerLink]="['/resultado']">Ir</button>
+        </div>
+    </div>
+
+    <h1 id="titulo">Filtros</h1>
+
+    <div class="groupButtons">
+        <label for="botones">Quiero Buscar</label>
+        <div name="botones">
+            <button class="boton">Artista</button>
+            <button class="boton">Album</button>
+            <button class="boton">Cancion</button>
+        </div>
+        <div>
+            <button class="boton">Playlist</button>
+            <button class="boton">Podcast</button>
+        </div>
+    </div>
+
+    <div class="inputGroups">
+        <label for="miselect">Genero</label>
+        <select class="custom-select" name="miselect" [(ngModel)]="seleccionadoGenero">
+            <option selected>Open this select menu</option>
+            <option [value]="item" *ngFor="let item of genero">{{item}}</option>
+        </select>
+
+        <label for="miselect">Decada</label>
+        <select class="custom-select" name="miselect" [(ngModel)]="seleccionadoDecada">
+            <option selected>Open this select menu</option>
+            <option [value]="item" *ngFor="let item of decadas">{{item}}</option>
+        </select>
+    </div>
+</div>
+
+<app-music-reproductor></app-music-reproductor>

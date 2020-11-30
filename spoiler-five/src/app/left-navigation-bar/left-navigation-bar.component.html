@@ -1,0 +1,49 @@
+<aside class="px-0 fixed-top bg-dark d-none d-lg-block" id="left">
+    <div class="bg-logo text-center" [routerLink]="['/home']">
+        <img src="./assets/Logo (1).png" class="my-2 bar-logo" alt="">
+    </div>
+    <div class="list-group w-100 bg-dark">
+        <div class="mt-5">
+            <h3 class="list-group-item"> General</h3>
+            <a class="list-group-item icono">
+                <fa-icon [icon]="faMusic" class="mx-3"></fa-icon>
+                Canciones
+            </a>
+            <a class="list-group-item icono">
+                <fa-icon [icon]="faPodcast" class="mx-3"></fa-icon>
+                Podcast
+            </a>
+            <a class="list-group-item icono">
+                <fa-icon [icon]="faPlaylist" class="mx-3"></fa-icon>
+                Playlist
+            </a>
+            <a class="list-group-item icono">
+                <fa-icon [icon]="faAlbum" class="mx-3"></fa-icon>
+                Albumes
+            </a>
+            <a class="list-group-item icono">
+                <fa-icon [icon]="faArtist" class="mx-3"></fa-icon>
+                Artistas
+            </a>
+        </div>
+        <div class="mt-5">
+            <h3 class="list-group-item">
+                Mi musica</h3>
+            <a class="list-group-item icono">
+                <fa-icon [icon]="faMusic" class="mx-3"></fa-icon>
+                Mis favoritos
+            </a>
+            <a class="list-group-item icono">
+                <fa-icon [icon]="faPodcast" class="mx-3"></fa-icon>
+                Mis podcast
+            </a>
+            <a class="list-group-item icono">
+                <fa-icon [icon]="faPlaylist" class="mx-3"></fa-icon>
+                Mis playlist
+            </a>
+            <a class="list-group-item text-center mt-4"> <button class="primary-button"> + Nueva Playlist
+                </button></a>
+        </div>
+    </div>
+
+</aside>

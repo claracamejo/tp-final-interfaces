@@ -1,0 +1,47 @@
+#body {
+    top: 6.5rem;
+    margin-left: 30%;
+}
+
+.first-carousel {
+    width: 100%;
+}
+
+.last-row {
+    margin-bottom: 30%;
+}
+
+h1,
+h2 {
+    background: -webkit-linear-gradient(#FC947D 0%, #FB7079 53.65%, #FA5075 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (min-width: 420px) {
+    .last-row {
+        margin-bottom: 15%;
+    }
+    #mobile {
+        display: none;
+    }
+    .title-row {
+        width: 100vw;
+    }
+    h1 {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .last-row {
+        margin-bottom: 15%;
+    }
+    #mobile {
+        display: inline-block;
+        margin-left: 8%;
+    }
+    #body {
+        display: none;
+    }
+}

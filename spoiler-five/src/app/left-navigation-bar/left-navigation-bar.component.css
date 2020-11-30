@@ -1,0 +1,55 @@
+/* Acomodar la altura en base a la altura de la pantalla */
+
+aside {
+    width: 16%;
+    height: 100%;
+}
+
+.list-group-item {
+    background-color: #343a40;
+    color: white;
+    border: none;
+    line-height: normal;
+    padding: .15em 1em;
+}
+
+fa-icon {
+    font-size: 21px;
+}
+
+a {
+    font-size: 20px;
+}
+
+.primary-button {
+    height: 58px;
+    width: 12.639vw;
+    border-radius: 15px;
+}
+
+.bar-logo {
+    height: 15vh;
+}
+
+.bg-logo {
+    background-color: var(--background-color);
+}
+
+h3 {
+    background: -webkit-linear-gradient(180deg, #D461E3 0%, #6174D7 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.icono {
+    background: -webkit-linear-gradient(#FC947D 0%, #FB7079 53.65%, #FA5075 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+a.list-group-item:hover {
+    background-color: #343a40;
+    color: white;
+    border: none;
+    text-decoration: underline solid white;
+}

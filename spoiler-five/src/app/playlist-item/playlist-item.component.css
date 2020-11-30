@@ -1,0 +1,74 @@
+p {
+    margin: 0;
+    background: -webkit-linear-gradient(#FC947D 0%, #FB7079 53.65%, #FA5075 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.square {
+    border-radius: 5px;
+    border-image-source: linear-gradient(180deg, #FC947D 0%, #FB7079 53.65%, #FA5075 100%);
+}
+
+.label-name {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 12px;
+    text-align: center;
+    color: linear-gradient(180deg, #FC947D 0%, #FB7079 53.65%, #FA5075 100%);
+}
+
+.label-artist {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 12px;
+    text-align: center;
+    color: linear-gradient(180deg, #FC947D 0%, #FB7079 53.65%, #FA5075 100%);
+}
+
+.square img {
+    transition: 0.3s;
+    z-index: 0;
+}
+
+.square :hover {
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+    transform: scale3d(1.1, 1.1, 1.1);
+}
+
+@media only screen and (max-width: 420px) {
+    .item {
+        width: 90px;
+    }
+    .square img {
+        height: 88px;
+        width: 88px;
+    }
+    .label-name {
+        font-size: 10px;
+    }
+    .label-artist {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (min-width: 420px) {
+    .item {
+        width: 150px;
+    }
+    p {
+        margin: 0;
+    }
+    .square img {
+        height: 115px;
+        width: 120px;
+    }
+    .label-name {
+        font-size: 12px;
+    }
+    .label-artist {
+        font-size: 10px;
+    }
+}

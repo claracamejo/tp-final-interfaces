@@ -1,0 +1,84 @@
+:root {
+    --background-color: #585A66;
+    --primary-color: #FC947D;
+    --secondary-color: #D461E3;
+    --dark-grey:  #181B2C;
+    --middle-grey: #585A66;
+    --light-grey: #D0D1D4;
+}
+
+
+/* Font sizes  */
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #181B2C;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+h4{
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 16px;
+}
+
+label {
+    font-size: 15px;
+}
+
+.small {
+    font-size: 14px;
+}
+
+@media only screen and (min-width: 420px) {
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h4{
+        font-size: 20px;
+    }
+    h5 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 16px;
+    }
+    label {
+        font-size: 15px;
+    }
+    .small {
+        font-size: 14px;
+    }
+}
+
+
+/* Components (don't have sizes, only styles) */
+
+.primary-button {
+    background: linear-gradient(180deg, #FC947D 0%, #FB7079 53.65%, #FA5075 100%);
+    border-radius: 100px;
+    color: white;
+}

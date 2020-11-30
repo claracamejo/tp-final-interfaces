@@ -1,0 +1,286 @@
+.primary-button {
+    width: 128px;
+    height: 30px;
+    border-radius: 100px;
+}
+
+.desktop-display {
+    margin-bottom: 10%;
+    margin-top: 5%;
+    color: white;
+}
+
+.mobile-display {
+    margin-bottom: 10%;
+    margin-top: 5%;
+    color: white;
+}
+
+table {
+    color: white;
+}
+
+table th {
+    color: #FC947D;
+    border-color: #FC947D !important;
+    border-top: none;
+}
+
+table td {
+    border-color: #FC947D !important;
+    border-bottom: 1px solid;
+}
+
+table fa-icon {
+    color: #FC947D;
+    font-size: 20px;
+}
+
+.star :hover {
+    color: yellow;
+}
+
+.fixed-top {
+    height: 100px;
+}
+
+@media only screen and (min-width: 420px) {
+    table {
+        font-size: 16px;
+    }
+    table th {
+        font-size: 12px;
+    }
+    .user-review fa-icon {
+        font-size: 30px;
+    }
+    .user-review p {
+        margin: 0;
+    }
+    .bordered {
+        border-radius: 22px;
+        border: 2px black solid;
+    }
+    .primary-button {
+        width: 128px;
+        height: 30px;
+        border-radius: 100px;
+    }
+    .podcast-details .type {
+        font-size: 16px;
+        color: #FC947D;
+    }
+    .podcast-details {
+        font-style: bold;
+    }
+    .podcast-details p span {
+        color: #FC947D;
+    }
+    .podcast-rating fa-icon {
+        font-size: 20px;
+        color: #E1914B;
+    }
+    .podcast-rating span {
+        text-decoration: underline;
+    }
+    .right-icons fa-icon {
+        font-size: 22px;
+        color: #FC947D;
+    }
+    .right-icons {
+        font-size: 16px;
+        color: #FC947D;
+    }
+    textarea {
+        height: 77px;
+        width: 90%;
+        background-color: #383B49;
+        border: 1px solid #FC947D;
+        border-radius: 5px;
+        resize: none;
+    }
+    .bordered {
+        border-radius: 22px;
+        border: 2px #FC947D solid;
+    }
+    .bordered .row {
+        margin-bottom: 0px !important;
+    }
+    .comentario span {
+        color: #FC947D;
+        font-size: 18px;
+    }
+    .comentario fa-icon {
+        color: #E1914B;
+    }
+    .comentario p {
+        font-size: 14px;
+        margin: 0.2rem;
+    }
+    .podcast-details h2 {
+        margin-top: 0;
+    }
+    .label-podcast {
+        font-size: 13px;
+        color: #FC947D;
+    }
+    .label-podcast span {
+        color: white !important;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    table {
+        font-size: 16px;
+    }
+    table td {
+        border-top: none;
+    }
+    .podcast-details {
+        color: #FC947D;
+    }
+    .podcast-details fa-icon {
+        color: #E1914B;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    .podcast-header {
+        width: 100%;
+    }
+    textarea {
+        height: 126px;
+        width: 90%;
+        background-color: #585A66;
+        border: 1px solid #FC947D;
+        border-radius: 5px;
+        resize: none;
+    }
+    .nav-tabs>li.active>a {
+        color: #FC947D;
+        background-color: #383B49;
+        border: 2px solid #FC947D;
+        border-radius: 15px 15px 0px 0px;
+        border-bottom-color: transparent;
+    }
+    .nav>li>a {
+        color: #FC947D;
+        background-color: #585A66;
+        border: 2px solid #FC947D;
+        border-radius: 15px 15px 0px 0px;
+        border-bottom-color: transparent;
+        padding: 8px 35px;
+    }
+    .tab-content {
+        min-height: 50vh;
+        background-color: #383B49;
+    }
+    .bordered {
+        border: 2px solid #FC947D;
+        border-radius: 30px;
+    }
+    .comentario span {
+        color: #FC947D;
+        font-size: 18px;
+    }
+    .comentario fa-icon {
+        color: #E1914B;
+    }
+    .comentario p {
+        font-size: 14px;
+        margin: 0.2rem;
+    }
+    #comentar h2 {
+        color: #FC947D;
+    }
+    .user-review fa-icon {
+        font-size: 22px;
+    }
+    .user-review p {
+        color: #FC947D;
+        margin-bottom: 0;
+    }
+    .right-icons fa-icon {
+        font-size: 24px;
+        color: #FC947D;
+    }
+    .label {
+        font-size: 14px;
+        color: #FC947D;
+    }
+    #actividad .bordered {
+        margin-bottom: 50px;
+    }
+}
+
+
+/*flip card */
+
+.card {
+    background-color: var(--dark-grey);
+    position: relative;
+    width: 210px;
+    height: 210px;
+    cursor: pointer;
+    float: right;
+    border: none;
+}
+
+.card:hover .card-content {
+    transform: rotateY(.5turn);
+}
+
+.card-content {
+    height: 150px;
+    text-align: center;
+    position: relative;
+    padding: 5rem;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.card-back p {
+    margin-top: 50px;
+}
+
+.card-back,
+.card-front {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    width: 193px;
+    height: 193px;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    align-content: center;
+    border-radius: 10px;
+}
+
+.card-front {
+    background-size: cover;
+}
+
+.card-front::before {
+    position: absolute;
+    top: 1em;
+    bottom: 1em;
+    left: 1em;
+    right: 1em;
+    transform: translateZ(3rem)
+}
+
+.card-back {
+    transform: rotateY(.5turn);
+}
+
+.card-body {
+    font-size: 1.3rem !important;
+    transform: translateZ(3rem);
+}
+
+.card-body fa-icon {
+    color: #FC947D;
+}

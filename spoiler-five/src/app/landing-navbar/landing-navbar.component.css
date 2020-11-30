@@ -1,0 +1,92 @@
+nav {
+    background-color: #181B2C;
+    height: 5rem;
+    width: 100vw;
+}
+
+.logoSpoiler{
+    width: auto;
+    position: absolute;
+    left: 5%;
+    margin-top: 1.5%;
+    font-family: 'Sansita', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    background: -webkit-linear-gradient(#FC947D 0%, #FB7079 53.65%, #FA5075 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+.icono{
+    height: 3rem;
+    width: auto;
+    float: right;
+    margin-right: 3%;
+    margin-top: 2%;
+}
+
+.icono-left{
+    height: 3rem;
+    width: auto;
+    float: right;
+    margin-right: 3%;
+    margin-top: 3.5%;
+}
+
+@media only screen and (max-width: 420px) {
+    a {
+        text-decoration: none !important;
+        color: white;
+        font-size: 16px;
+    }
+    .primary-button {
+        font-size: 14px;
+        padding: 5px 5px 5px 5px;
+    }
+
+    .logoSpoiler img{
+        width: 40px; 
+        height: 40px;
+    }
+}
+
+@media only screen and (min-width: 899px) {
+
+    nav{
+        height: 8rem;
+    }
+
+    .primary-button {
+        font-size: 16px;
+        padding: 5px 13px 5px 13px;
+    }
+
+    .logoSpoiler{
+        left: 5%;
+        margin-top: 1%; 
+        font-size: 22px;
+    }
+
+    .logoSpoiler img{
+        width: 60px; 
+        height: 60px;
+    }
+
+   .icono{
+       margin-top: 1.5%;
+       margin-right: 5%;
+   }
+
+   .icono-left{
+       margin-top: 2%;
+       margin-right: 5%;
+       font-size: 18px;
+       background: -webkit-linear-gradient(#FC947D 0%, #FB7079 53.65%, #FA5075 100%);
+       background-clip: text;
+       -webkit-text-fill-color: transparent;
+   }
+
+   
+}

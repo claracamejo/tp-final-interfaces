@@ -1,0 +1,106 @@
+#body {
+    top: 6rem;
+    bottom: 10rem;
+    margin-left: 30%;
+}
+
+#body p {
+    color: white;
+}
+
+.first-carousel {
+    width: 100%;
+}
+
+.last-row {
+    margin-bottom: 30%;
+}
+
+#mobile {
+    margin: 5%;
+}
+
+.corazon :hover {
+    color: rgba(250, 39, 39, 0.822);
+}
+
+h1 {
+    background: -webkit-linear-gradient(#FC947D 0%, #FB7079 53.65%, #FA5075 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+table {
+    color: white;
+    z-index: 0;
+}
+
+table th {
+    color: #FC947D;
+    border-color: #FC947D !important;
+    border-top: none;
+}
+
+table td {
+    border-color: #FC947D !important;
+    border-bottom: 1px solid;
+}
+
+table fa-icon {
+    font-size: 20px;
+}
+
+table .table-icon {
+    color: #FC947D;
+}
+
+.icono-left {
+    color: #FC947D;
+    font-size: 20px;
+}
+
+.title-row {
+    width: 80vw;
+}
+
+@media only screen and (min-width: 420px) {
+    .last-row {
+        margin-bottom: 15%;
+    }
+    #mobile {
+        display: none;
+    }
+    table {
+        font-size: 16px;
+    }
+    table th {
+        font-size: 12px;
+    }
+    h1 {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 419px) {
+    h2 {
+        background: -webkit-linear-gradient(#FC947D 0%, #FB7079 53.65%, #FA5075 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    #mobile {
+        display: inline-block;
+        margin-top: 6.3rem;
+    }
+    #mobile p {
+        color: white;
+    }
+    table {
+        font-size: 16px;
+    }
+    table td {
+        border-top: none;
+    }
+    table fa-icon {
+        color: #FC947D;
+    }
+}
