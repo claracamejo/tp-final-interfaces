@@ -1,18 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { faClock, faEllipsisH, faHeart, faList, faPlay, faShareAlt, faStar } from '@fortawesome/free-solid-svg-icons';
 import { Song } from './Song';
+import { state, style, transition, animate, trigger } from '@angular/animations'
 
 @Component({
   selector: 'app-resultado-busqueda',
   templateUrl: './resultado-busqueda.component.html',
-  styleUrls: ['./resultado-busqueda.component.css']
+  styleUrls: ['./resultado-busqueda.component.css'],
+  animations: []
 })
 export class ResultadoBusquedaComponent implements OnInit {
-
+  rotated;
   constructor() { }
 
   ngOnInit(): void {
     this.corazon = "#585A66";
+    this.rotated = false;
   }
 
   corazon: string;
@@ -64,7 +67,14 @@ export class ResultadoBusquedaComponent implements OnInit {
     } else {
       this.corazon = "#585A66"
     }
+  }
 
+  scrollDiv() {
+    this.rotated = true;
+  }
+
+  stopTimer(timer: number) {
+    this.rotated = false;
   }
 
 }
