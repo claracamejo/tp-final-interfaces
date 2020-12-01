@@ -35,8 +35,15 @@ p {
 
 .square :hover {
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
-    transform: scale3d(1.1, 1.1, 1.1);
+    animation: rotate 1.5s linear infinite ;
 }
+@keyframes rotate{
+    0% {transform: rotateZ(0deg);}
+    25%{transform: rotateZ(5deg)}
+    50%{transform: rotateZ(0deg)}
+    75% {transform: rotateZ(-5deg)}
+    100% {transform: rotateZ(0deg)}
+  }
 
 @media only screen and (max-width: 420px) {
     .item {
