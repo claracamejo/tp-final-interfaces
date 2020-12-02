@@ -15,6 +15,7 @@ export class MusicReproductorComponent implements OnInit {
   corazon: string;
   expandido: string;
   comun: string;
+  rotated: boolean;
 
   constructor() { }
   faVolume = faVolumeUp;
@@ -36,6 +37,7 @@ export class MusicReproductorComponent implements OnInit {
     this.corazon = "#585A66";
     this.expandido = "hidden";
     this.comun = "visible";
+    this.rotated = true;
   }
 
   getCorazon() {
@@ -77,6 +79,7 @@ export class MusicReproductorComponent implements OnInit {
   }
 
   clickAddTodo(n) {
+    this.rotated = false;
     this.color = "#585A66";
     this.color2 = "#585A66";
     this.color3 = "#585A66";
@@ -106,5 +109,7 @@ export class MusicReproductorComponent implements OnInit {
     this.comun = "hidden";
     this.expandido = "visible";
   }
+
+
 
 }

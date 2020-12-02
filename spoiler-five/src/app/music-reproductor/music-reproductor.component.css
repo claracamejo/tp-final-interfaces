@@ -49,9 +49,17 @@ button {
     color: black;
 }
 
-.star :hover {
-    color: yellow;
-}
+.rotated {
+    display: inline-block;
+    transform-origin: top center;
+    animation: mover 2s linear infinite ;
+  }
+  @keyframes mover{
+    0% {transform: scale3d(1, 1, 1);
+    color: "#585A66";}
+    100%{transform: scale3d(1.1, 1.1, 1.1);
+    color: gold;}
+  }
 
 .corazon :hover {
     color: rgba(250, 39, 39, 0.822);
