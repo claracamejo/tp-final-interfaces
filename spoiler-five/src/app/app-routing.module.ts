@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { BusquedaComponent } from './busqueda/busqueda.component';
 import { ResultadoBusquedaComponent } from './resultado-busqueda/resultado-busqueda.component';
+import { FavoritesSongsComponent } from './favorites-songs/favorites-songs.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,9 @@ const routes: Routes = [
   },
   {
     path: 'resultado', component: ResultadoBusquedaComponent
+  },
+  {
+    path: 'favorites/songs', component: FavoritesSongsComponent
   },
 ];
 

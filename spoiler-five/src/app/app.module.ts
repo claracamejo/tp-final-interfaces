@@ -16,6 +16,7 @@ import { DetailPodcastComponent } from './detail-podcast/detail-podcast.componen
 import { BusquedaComponent } from './busqueda/busqueda.component';
 import { PlaylistItemComponent } from './playlist-item/playlist-item.component';
 import { ResultadoBusquedaComponent } from './resultado-busqueda/resultado-busqueda.component';
+import { FavoritesSongsComponent } from './favorites-songs/favorites-songs.component';
 
 
 
@@ -35,7 +36,8 @@ import { ResultadoBusquedaComponent } from './resultado-busqueda/resultado-busqu
     DetailPlaylistComponent,
     DetailPodcastComponent,
     PlaylistItemComponent,
-    ResultadoBusquedaComponent
+    ResultadoBusquedaComponent,
+    FavoritesSongsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,61 @@
+<app-nav-bar> </app-nav-bar>
+
+<div>
+    <div class="row d-none d-md-flex">
+        <div class="col-3">
+            <app-left-navigation-bar> </app-left-navigation-bar>
+        </div>
+        <div class="col-9 mt-5" id="body">
+
+            <div class="row mt-5">
+                <table class="table mt-5">
+                    <thead>
+                        <th>
+
+                        </th>
+                        <th>
+                            TITLE
+                        </th>
+                        <th>
+                            ARTIST
+                        </th>
+                        <th>ALBUM</th>
+                        <th>
+                            RELEASE DATE
+                        </th>
+                        <th>
+
+                        </th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let song of songs">
+                            <td>
+                                <fa-icon [icon]="faPlay"> </fa-icon>
+                            </td>
+                            <td [routerLink]="['/song/detail']">
+                                {{song.name}}
+                            </td>
+                            <td>
+                                {{song.artist}}
+                            </td>
+                            <td>
+                                {{song.album}}
+                            </td>
+                            <td>
+                                {{song.release}}
+                            </td>
+                            <td class="text-right">
+                                <fa-icon [icon]="faHeart"> </fa-icon>
+                                <fa-icon [icon]="faList" class="mx-4"> </fa-icon>
+                                <fa-icon [icon]="faDots"></fa-icon>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<app-music-reproductor> </app-music-reproductor>

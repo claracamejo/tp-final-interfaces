@@ -1,0 +1,54 @@
+/* 
+.desktop-display {
+    margin-bottom: 10%;
+    margin-top: 5%;
+    color: white;
+}
+
+.mobile-display {
+    margin-bottom: 10%;
+    margin-top: 5%;
+    color: white;
+} */
+
+table {
+    color: white;
+}
+
+table th {
+    color: #FC947D;
+    border-color: #FC947D !important;
+    border-top: none;
+}
+
+table td {
+    border-color: #FC947D !important;
+    border-bottom: 1px solid;
+}
+
+table fa-icon {
+    color: #FC947D;
+    font-size: 20px;
+}
+
+.star :hover {
+    color: yellow;
+}
+
+@media only screen and (max-width: 420px) {
+    table {
+        font-size: 16px;
+    }
+    table td {
+        border-top: none;
+    }
+}
+
+@media only screen and (min-width: 420px) {
+    table {
+        font-size: 16px;
+    }
+    table th {
+        font-size: 12px;
+    }
+}
